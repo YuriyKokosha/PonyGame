@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders
+END
+unlit_cutout_lightmapped.shader
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/unlit_cutout_lightmapped.shader
+END
+Unlit_color_cutout.shader.meta
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/Unlit_color_cutout.shader.meta
+END
+textured_text_shader.shader.meta
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/textured_text_shader.shader.meta
+END
+Unlit_texture_color_lightmap.shader.meta
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/Unlit_texture_color_lightmap.shader.meta
+END
+unlit_trans_color_Zoff.shader
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/unlit_trans_color_Zoff.shader
+END
+unlit_trans_color.shader.meta
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/unlit_trans_color.shader.meta
+END
+MobileUnlitTransparent.shader.meta
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/MobileUnlitTransparent.shader.meta
+END
+Unlit_color_cutout.shader
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/Unlit_color_cutout.shader
+END
+MobileAlphaCustom.shader.meta
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/MobileAlphaCustom.shader.meta
+END
+textured_text_shader.shader
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/textured_text_shader.shader
+END
+Unlit_texture_color_lightmap.shader
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/Unlit_texture_color_lightmap.shader
+END
+Unlit_texture_color.shader.meta
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/Unlit_texture_color.shader.meta
+END
+unlit_trans_color.shader
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/unlit_trans_color.shader
+END
+unlit_cutout_lightmapped.shader.meta
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/unlit_cutout_lightmapped.shader.meta
+END
+MobileUnlitTransparent.shader
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/MobileUnlitTransparent.shader
+END
+MobileAlphaCustom.shader
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/MobileAlphaCustom.shader
+END
+Unlit_texture_color.shader
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/Unlit_texture_color.shader
+END
+unlit_trans_color_Zoff.shader.meta
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Shaders/unlit_trans_color_Zoff.shader.meta
+END

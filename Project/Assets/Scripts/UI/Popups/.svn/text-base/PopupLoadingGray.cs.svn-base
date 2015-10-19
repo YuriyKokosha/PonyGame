@@ -1,0 +1,24 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class PopupLoadingGray : PopupBase 
+{
+	// ------------------------------------------------------------------------------------ //
+
+	public PopupLoadingGray () 
+	{
+		
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+	
+	public override void initializeBase (int popupNumber)
+	{
+		_type = PopupType.LoadingGray;
+		_name = "PopupLoadingGray";
+
+		base.initializeBase(popupNumber);
+	}
+	
+	// ------------------------------------------------------------------------------------ //	
+}

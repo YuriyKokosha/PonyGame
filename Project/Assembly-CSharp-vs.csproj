@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{EB708284-B9C1-F4AB-CE7C-199AECC6A36D}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_5;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\Animation\Texture\AnimationTexture.cs" />
+     <Compile Include="Assets\Scripts\Game\Camera\GameCamera.cs" />
+     <Compile Include="Assets\Scripts\Game\Controllers\ActiveUnitController.cs" />
+     <Compile Include="Assets\Scripts\Game\Controllers\FenceController.cs" />
+     <Compile Include="Assets\Scripts\Game\Controllers\GameController.cs" />
+     <Compile Include="Assets\Scripts\Game\Controllers\TimeController.cs" />
+     <Compile Include="Assets\Scripts\Game\Items\Base\ItemBase.cs" />
+     <Compile Include="Assets\Scripts\Game\Items\Base\ItemFactory.cs" />
+     <Compile Include="Assets\Scripts\Game\Items\Base\ItemType.cs" />
+     <Compile Include="Assets\Scripts\Game\Items\ItemBonus.cs" />
+     <Compile Include="Assets\Scripts\Game\ItemsObservers\IItemRecievedObserver.cs" />
+     <Compile Include="Assets\Scripts\Game\Timer\GameTimer.cs" />
+     <Compile Include="Assets\Scripts\Game\Timer\IGameTimerObserver.cs" />
+     <Compile Include="Assets\Scripts\Game\Timer\TimePrint.cs" />
+     <Compile Include="Assets\Scripts\Game\Touches\GameTouchController.cs" />
+     <Compile Include="Assets\Scripts\Game\Touches\GameTouchParams.cs" />
+     <Compile Include="Assets\Scripts\Game\Touches\IGameTouchObserver.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\GameUI.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitModel\UnitModel.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitModel\UnitModelTextureType.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitObservers\IUnitBehindFenceObserver.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitObservers\IUnitCollisionObserver.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitObservers\IUnitMasterObserver.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitStates\Base\UnitStateBase.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitStates\UnitStateBehindFence.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitStates\UnitStateFollowTheMaster.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitStates\UnitStateMove.cs" />
+     <Compile Include="Assets\Scripts\Game\UnitStates\UnitStateQuiescence.cs" />
+     <Compile Include="Assets\Scripts\Game\Units\Base\UnitBase.cs" />
+     <Compile Include="Assets\Scripts\Game\Units\Base\UnitFactory.cs" />
+     <Compile Include="Assets\Scripts\Game\Units\Base\UnitMasterBase.cs" />
+     <Compile Include="Assets\Scripts\Game\Units\Base\UnitSlaveBase.cs" />
+     <Compile Include="Assets\Scripts\Game\Units\Base\UnitType.cs" />
+     <Compile Include="Assets\Scripts\Game\Units\Dog\UnitDog.cs" />
+     <Compile Include="Assets\Scripts\Game\Units\Pony\UnitPony.cs" />
+     <Compile Include="Assets\Scripts\Main\PhysicsBase.cs" />
+     <Compile Include="Assets\Scripts\Main\ResourcesBase.cs" />
+     <Compile Include="Assets\Scripts\Main\SLog.cs" />
+     <Compile Include="Assets\Scripts\Scenes\Base\SceneBase.cs" />
+     <Compile Include="Assets\Scripts\Scenes\SceneGame.cs" />
+     <Compile Include="Assets\Scripts\UI\Base\UICamera.cs" />
+     <Compile Include="Assets\Scripts\UI\Base\UIManager.cs" />
+     <Compile Include="Assets\Scripts\UI\Canvas\CanvasBase.cs" />
+     <Compile Include="Assets\Scripts\UI\Canvas\CanvasEventSystem.cs" />
+     <Compile Include="Assets\Scripts\UI\Popups\Base\PopupBase.cs" />
+     <Compile Include="Assets\Scripts\UI\Popups\Base\PopupFactory.cs" />
+     <Compile Include="Assets\Scripts\UI\Popups\Base\PopupManager.cs" />
+     <Compile Include="Assets\Scripts\UI\Popups\Base\PopupType.cs" />
+     <Compile Include="Assets\Scripts\UI\Popups\Params\PopupParamsBase.cs" />
+     <Compile Include="Assets\Scripts\UI\Popups\PopupLevelCompleted.cs" />
+     <None Include="Assets\Shaders\Unlit_texture_color_lightmap.shader" />
+     <None Include="Assets\Shaders\Unlit_color_cutout.shader" />
+     <None Include="Assets\Shaders\unlit_trans_color_Zoff.shader" />
+     <None Include="Assets\Shaders\unlit_trans_color.shader" />
+     <None Include="Assets\Shaders\Unlit_texture_color.shader" />
+     <None Include="Assets\Shaders\unlit_cutout_lightmapped.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.5/UnityEngine.UI.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

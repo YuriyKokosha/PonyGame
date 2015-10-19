@@ -1,0 +1,46 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class PopupLevelCompleted : PopupBase {
+
+	// ------------------------------------------------------------------------------------ //
+	
+	public PopupLevelCompleted () 
+	{
+		
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+	
+	public void initialize (int popupNumber, int starsCount)
+	{
+		_type = PopupType.LevelCompleted;
+		_name = "PopupLevelCompleted";
+		
+		base.initializeBase(popupNumber);
+		
+		addDelegateToButton("ButtonContinue", 	delegate() { ((SceneGame) SceneBase.getCurrentSceneClass()).onPopupButtonContinueClick(); });
+		addDelegateToButton("ButtonRetry", 		delegate() { ((SceneGame) SceneBase.getCurrentSceneClass()).onPopupButtonRetryClick(); });
+		addDelegateToButton("ButtonMainMenu", 	delegate() { ((SceneGame) SceneBase.getCurrentSceneClass()).onPopupButtonMainMenuClick(); });
+
+		for (int i=1; i<=3; i++) {
+			if (starsCount < i) {
+				setLevelStarEnabled(i, false);
+			}
+			else {
+				setLevelStarEnabled(i, true);
+			}
+		}
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	private void setLevelStarEnabled (int starNumber, bool enabled) 
+	{
+		GameObject levelStar = popupCanvasGO.transform.FindChild("ImageStar"+starNumber.ToString()).gameObject;
+		levelStar.GetComponent<Image>().enabled = enabled;
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+}

@@ -1,0 +1,11 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public enum PopupType 
+{
+	Pause,
+	Exit,
+	LevelFailed,
+	LevelCompleted,
+	LoadingGray
+}

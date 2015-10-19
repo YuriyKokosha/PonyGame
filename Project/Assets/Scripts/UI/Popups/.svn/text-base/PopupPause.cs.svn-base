@@ -1,0 +1,29 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class PopupPause : PopupBase 
+{
+	// ------------------------------------------------------------------------------------ //
+	
+	public PopupPause () 
+	{
+		
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+	
+	public override void initializeBase (int popupNumber)
+	{
+		_type = PopupType.Pause;
+		_name = "PopupPause";
+		
+		base.initializeBase(popupNumber);
+
+		addDelegateToButton("ButtonRetry", 		delegate() { ((SceneGame) SceneBase.getCurrentSceneClass()).onPopupButtonReloadClick(); });
+		addDelegateToButton("ButtonViewLevel", 	delegate() { ((SceneGame) SceneBase.getCurrentSceneClass()).onPopupButtonViewLevelClick(); });
+		addDelegateToButton("ButtonMainMenu", 	delegate() { ((SceneGame) SceneBase.getCurrentSceneClass()).onPopupButtonMainMenuClick(); });
+		addDelegateToButton("ButtonBack", 		delegate() { ((SceneGame) SceneBase.getCurrentSceneClass()).onPopupButtonReturnClick(); });
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+}

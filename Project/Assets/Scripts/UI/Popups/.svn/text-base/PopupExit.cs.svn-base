@@ -1,0 +1,28 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class PopupExit : PopupBase 
+{
+	// ------------------------------------------------------------------------------------ //
+
+	public PopupExit () 
+	{
+		
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+	
+	public override void initializeBase (int popupNumber) 
+	{
+		_type = PopupType.Exit;
+		_name = "PopupExit";
+
+		base.initializeBase(popupNumber);
+
+		addDelegateToButton("ButtonExitYes", 	delegate() { SceneBase.getCurrentSceneClass().onPopupExitYesClick(); });
+		addDelegateToButton("ButtonExitNo", 	delegate() { SceneBase.getCurrentSceneClass().onPopupButtonReturnClick(); });
+	}
+
+	// ------------------------------------------------------------------------------------ //
+}

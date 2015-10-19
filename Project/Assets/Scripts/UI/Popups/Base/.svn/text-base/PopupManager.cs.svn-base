@@ -1,0 +1,151 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class PopupManager : MonoBehaviour 
+{
+	// ------------------------------------------------------------------------------------ //
+	
+	public static PopupManager getPopupManager () 
+	{
+		GameObject popupManagerGO = new GameObject ("PopupManager");
+		return getPopupManager (popupManagerGO);
+	}
+	
+	public static PopupManager getPopupManager (GameObject popupManagerGO) 
+	{
+		PopupManager popupManager = popupManagerGO.AddComponent<PopupManager>();
+		return popupManager;
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+
+	private List<PopupBase> popups;
+
+	// ------------------------------------------------------------------------------------ //
+
+	public PopupManager () 
+	{
+		popups = new List<PopupBase>();
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	public void showPopup (PopupType type)
+	{
+		PopupBase popup = null;
+		int popupNumber = popups.Count;
+
+		if (type == PopupType.Pause) {
+			popup = gameObject.AddComponent<PopupPause>();
+		}
+		else if (type == PopupType.Exit) {
+			popup = gameObject.AddComponent<PopupExit>();
+		}
+		else if (type == PopupType.LoadingGray) {
+			popup = gameObject.AddComponent<PopupLoadingGray>();
+		}
+		else if (type == PopupType.LevelFailed) {
+			SLog.logError("PopupManager showPopup: for PopupType.LevelFailed use void showPopupLevelFailed ()");
+			return;
+		}
+		else if (type == PopupType.LevelCompleted) {
+			SLog.logError("PopupManager showPopup: for PopupType.LevelCompleted use void showPopupLevelCompleted ()");
+			return;
+		}
+
+		if (popup == null) 
+		{
+			SLog.logError("PopupManager showPopup: type == " + type.ToString() + ", PopupBase popup == null");
+			return;
+		}
+
+		popup.initializeBase(popupNumber);
+		popups.Add(popup);
+	}
+
+	// ------------------------------------------------------------------------------------ //
+	
+	public void showPopupLevelFailed (PopupLevelFailed.FailType type)
+	{
+		int popupNumber = popups.Count;
+		PopupLevelFailed popup = gameObject.AddComponent<PopupLevelFailed>();
+		popup.initialize(popupNumber, type);
+		popups.Add(popup);
+	}
+
+	public void showPopupLevelCompleted (int starsCount)
+	{
+		int popupNumber = popups.Count;
+		PopupLevelCompleted popup = gameObject.AddComponent<PopupLevelCompleted>();
+		popup.initialize(popupNumber, starsCount);
+		popups.Add(popup);
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	public bool isPopupShown ()
+	{
+		if (popups.Count != 0) {
+			return true;
+		}
+		return false;
+	}
+
+	public bool isPopupShown (PopupType type)
+	{
+		if (popups.Count != 0) {
+			foreach (PopupBase popup in popups) {
+				if (popup.getPopupType() == type) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	public PopupBase getCurrentPopup ()
+	{
+		int num = popups.Count;
+		if (num != 0)
+		{
+			PopupBase popup = popups[num-1];
+			return popup;
+		}
+
+		return null;
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+
+	public void removePopup (bool removeAll)
+	{
+		if (removeAll) 
+		{
+			foreach (PopupBase popup in popups) 
+			{
+				popup.destroyPopup();
+				Destroy(popup);
+			}
+
+			popups.Clear();
+		}
+		else 
+		{
+			int num = popups.Count;
+			if (num != 0)
+			{
+				PopupBase popup = popups[num-1];
+				popup.destroyPopup();
+				Destroy(popup);
+
+				popups.RemoveAt(num-1);
+			}
+		}
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+}

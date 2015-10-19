@@ -1,0 +1,85 @@
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class PopupBase : MonoBehaviour 
+{
+	// ------------------------------------------------------------------------------------ //
+
+	public static float popupFirstPosition = 250.0f;
+	public static float popupNextPosition = 25.0f;
+
+	// ------------------------------------------------------------------------------------ //
+
+	public GameObject popupCanvasGO;
+
+	public int _popupNumber = 0;
+	public PopupType _type;
+	public string _name; 
+
+	// ------------------------------------------------------------------------------------ //
+	
+	public PopupBase () 
+	{
+
+	}
+
+	public PopupType getPopupType ()
+	{
+		return _type;
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	public virtual void initializeBase (int popupNumber) 
+	{
+		_popupNumber = popupNumber;
+
+		popupCanvasGO = Instantiate (ResourcesBase.load(getCanvasPrefabPath()) as GameObject) as GameObject;
+		popupCanvasGO.name = _name;
+		popupCanvasGO.transform.localScale = Vector3.zero;
+		
+		Canvas popupCanvas = popupCanvasGO.GetComponent<Canvas>();
+		popupCanvas.planeDistance = popupFirstPosition - popupNumber * popupNextPosition;
+		popupCanvas.sortingOrder = (popupNumber + 10);
+		popupCanvas.worldCamera = SceneBase.getCurrentSceneClass().getUIManager().getUICamera().getCamera();
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	public string getCanvasPrefabPath () 
+	{
+		if (_name != null) {
+			return "Prefabs/Canvas/Popups/" + _name + "Canvas";
+		}
+		return null;
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+
+	public void addDelegateToButton (string buttonName, UnityEngine.Events.UnityAction call) 
+	{
+		GameObject buttonGO = popupCanvasGO.transform.FindChild(buttonName).gameObject;
+		Button button = buttonGO.GetComponent<Button>();
+		button.onClick.AddListener(call);
+	}
+
+	public void setCanvasText (string canvasTextName, string text) 
+	{
+		GameObject canvasTextGO = popupCanvasGO.transform.FindChild(canvasTextName).gameObject;
+		Text canvasText = canvasTextGO.GetComponent<Text>();
+		canvasText.text = text;
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	public virtual void destroyPopup () 
+	{
+		if (popupCanvasGO != null) {
+			Destroy(popupCanvasGO);
+			popupCanvasGO = null;
+		}
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+}

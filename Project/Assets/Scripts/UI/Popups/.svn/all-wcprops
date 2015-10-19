@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups
+END
+Base.meta
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/Base.meta
+END
+PopupExit.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupExit.cs
+END
+PopupLevelCompleted.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupLevelCompleted.cs.meta
+END
+PopupLevelFailed.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupLevelFailed.cs
+END
+PopupPause.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupPause.cs
+END
+PopupExit.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupExit.cs.meta
+END
+PopupLoadingGray.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupLoadingGray.cs
+END
+PopupLevelFailed.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupLevelFailed.cs.meta
+END
+PopupPause.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupPause.cs.meta
+END
+PopupLevelCompleted.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupLevelCompleted.cs
+END
+PopupLoadingGray.cs.meta
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/KokoshaTeam/!svn/ver/3/Projects/MysticWays/Assets/Scripts/UI/Popups/PopupLoadingGray.cs.meta
+END

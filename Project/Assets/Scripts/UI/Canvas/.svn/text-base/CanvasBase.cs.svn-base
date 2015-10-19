@@ -1,0 +1,55 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class CanvasBase : MonoBehaviour 
+{
+	// ------------------------------------------------------------------------------------ //
+
+	public static Canvas getSceneCanvas (string sceneCanvasName) 
+	{
+		GameObject canvasGO = Instantiate (ResourcesBase.load("Prefabs/Canvas/Scenes/" + sceneCanvasName) as GameObject) as GameObject;
+		canvasGO.name = sceneCanvasName;
+		canvasGO.transform.localScale = Vector3.zero;
+
+		Canvas canvas = canvasGO.GetComponent<Canvas>();
+		canvas.planeDistance = 500;
+		canvas.worldCamera = SceneBase.getCurrentSceneClass().getUIManager().getUICamera().getCamera();
+
+		return canvas;
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	public static void addDelegateToButton (GameObject canvasGO, string buttonName, UnityEngine.Events.UnityAction call) 
+	{
+		GameObject buttonGO = canvasGO.transform.FindChild(buttonName).gameObject;
+		Button button = buttonGO.GetComponent<Button>();
+		button.onClick.AddListener(call);
+	}
+
+	public static void addDelegateToButton (GameObject buttonGO, UnityEngine.Events.UnityAction call) 
+	{
+		Button button = buttonGO.GetComponent<Button>();
+		button.onClick.AddListener(call);
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	public static void setCanvasText (GameObject canvasGO, string canvasTextName, string text) 
+	{
+		GameObject canvasTextGO = canvasGO.transform.FindChild(canvasTextName).gameObject;
+		Text canvasText = canvasTextGO.GetComponent<Text>();
+		canvasText.text = text;
+	}
+
+	public static void setButtonText (GameObject buttonGO, string text) 
+	{
+		GameObject canvasTextGO = buttonGO.transform.FindChild("Text").gameObject;
+		Text canvasText = canvasTextGO.GetComponent<Text>();
+		canvasText.text = text;
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+}

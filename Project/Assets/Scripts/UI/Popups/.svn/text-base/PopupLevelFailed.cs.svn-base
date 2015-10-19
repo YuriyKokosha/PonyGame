@@ -1,0 +1,46 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class PopupLevelFailed : PopupBase 
+{
+	// ------------------------------------------------------------------------------------ //
+
+	public enum FailType 
+	{
+		FallFromLevel,
+		Captured,
+		HotFail,
+		TimeEnd
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	public PopupLevelFailed () 
+	{
+		
+	}
+	
+	// ------------------------------------------------------------------------------------ //
+	
+	public void initialize (int popupNumber, FailType type)
+	{
+		_type = PopupType.LevelFailed;
+		_name = "PopupLevelFailed";
+		
+		base.initializeBase(popupNumber);
+
+		addDelegateToButton("ButtonRetry", 		delegate() { ((SceneGame) SceneBase.getCurrentSceneClass()).onPopupButtonRetryClick(); });
+		addDelegateToButton("ButtonMainMenu", 	delegate() { ((SceneGame) SceneBase.getCurrentSceneClass()).onPopupButtonMainMenuClick(); });
+
+		setCanvasText("TextLevelFailed", Localisation.GetString("LevelFailed"));
+		setCanvasText("TextFailType", getFailTypeText(type));
+	}
+
+	// ------------------------------------------------------------------------------------ //
+
+	private string getFailTypeText (FailType type) {
+		return Localisation.GetString(type.ToString());
+	}
+	// ------------------------------------------------------------------------------------ //
+}
